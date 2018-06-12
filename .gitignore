@@ -59,3 +59,10 @@ typings/
 
 # next.js build output
 .next
+
+# secure data
+data/*.db
+config/secure.json
+
+# do not ignore gitkeep
+!.gitkeep

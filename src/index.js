@@ -9,14 +9,14 @@ const runCronTask = ({ name, cronTime }) => {
     }
 
     let cronTask = cronTaskFactory(cronTime)
-    cronTask.start()
+    // cronTask.start()
 
-    if (cronTask.running) {
-        console.info('Cron task `%s` started', name)
-    } else {
-        console.error('Cron task `%s` failed to start!', name)
-        throw new Error('Cron task start failed! Fix it or remove task from config')
-    }
+    // if (cronTask.running) {
+    //     console.info('Cron task `%s` started', name)
+    // } else {
+    //     console.error('Cron task `%s` failed to start!', name)
+    //     throw new Error('Cron task start failed! Fix it or remove task from config')
+    // }
 }
 
 module.exports = () => {

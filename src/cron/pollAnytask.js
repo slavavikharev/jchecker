@@ -61,13 +61,13 @@ const checkIssue = async ({ id,  taskName, latestEvent }) => {
         }
     }
 
-    if (latestEvent.timestamp === existingIssue.updatedAt) {
-        console.log('Found existing not updated issue with id=%i', id)
-        return
-    }
+    // if (latestEvent.timestamp === existingIssue.updatedAt) {
+    //     console.log('Found existing not updated issue with id=%i', id)
+    //     return
+    // }
 
     console.info('Here is updated issue with id=%i', id)
-    return testIssue({ id, taskName, latestEvent })
+    console.log(testIssue({ id, taskName, latestEvent }))
 }
 
 const pollCourse = async ({ courseId, pollingStatus }) => {
@@ -100,11 +100,13 @@ const pollAnytask = async () => {
     })
 }
 
-module.exports = (cronTime) => {
-    return new cron.CronJob({
-        cronTime: cronTime,
-        start: false,
-        timeZone: config.get('timezone'),
-        onTick: pollAnytask
-    })
-}
+// module.exports = (cronTime) => {
+//     return new cron.CronJob({
+//         cronTime: cronTime,
+//         start: false,
+//         timeZone: config.get('timezone'),
+//         onTick: pollAnytask
+//     })
+// }
+
+module.exports = pollAnytask

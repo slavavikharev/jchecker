@@ -20,9 +20,8 @@
             "245": {
                 "pollingStatus": 3,
                 "tasks": {
-                    "2975": "bruteforce",
-                    "2976": "fsm",
-                    "2977": "haffman"
+                    "2575": "entropy",
+                    "2977": "huffman"
                 }
             }
         },
